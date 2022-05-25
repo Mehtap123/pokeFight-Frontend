@@ -6,11 +6,11 @@ body {
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
-  display: flex;
+  /* display: flex;
   justify-content: center;
-  align-items: center;
-  width: 1264px;
-  height: 800px;
+  align-items: center; */
+  /* width: 1264px;
+  height: 800px; */
   background-color: yellow;
 }
 
