@@ -1,0 +1,44 @@
+import { useParams, useNavigate } from "react-router-dom";
+
+import React from "react";
+
+const PokemonInfo = ({ data, pictures }) => {
+  const { id } = useParams();
+  const navigate = useNavigate();
+  console.log(data);
+  console.log(pictures);
+  const findPokemon = data.find((poke) => id == poke.id);
+  console.log(findPokemon);
+  return (
+    <>
+      {findPokemon && (
+        <div class="card stylecard">
+          <div class="card-body stylebody">
+            <h1 class="card-title">{findPokemon.name.english}</h1>
+            <div class="card">
+              <h2 class="card-body japanese">{findPokemon.name.japanese}</h2>
+            </div>
+
+            <h6 class="card-title">
+              HP:{findPokemon.base.HP} Attack: {findPokemon.base.Attack}
+            </h6>
+
+            <h6 class="card-title">
+              Defense: {findPokemon.base.Defense} Speed:{findPokemon.base.Speed}{" "}
+            </h6>
+            <div class="buttonstyletwo">
+              <a href="#" class="btn btn-warning buttonstyle">
+                Select
+              </a>
+              <a href="#" class="btn btn-warning">
+                Back
+              </a>
+            </div>
+          </div>
+        </div>
+      )}
+    </>
+  );
+};
+
+export default PokemonInfo;
