@@ -75,3 +75,38 @@ button {
     transform: rotate(360deg);
   }
 }
+
+.fff{
+  display: flex;
+  float: left;
+  margin:10px 10px;
+  justify-content: space-around;
+}
+
+.buttonstyle{
+  margin-right: 10px;
+}
+
+.stylecard{
+  margin: 50px 50px;
+  
+}
+
+.stylebody{
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.buttonstyletwo{
+  display: inline-block !important;
+  justify-content: space-around;
+}
+
+.japanese{
+  background-color: red;
+  border: 2px solid black ;
+  color:white;
+  font-weight: bold;
+}
