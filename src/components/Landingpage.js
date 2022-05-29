@@ -1,9 +1,11 @@
 import logo from "../logo.svg";
 import pokemon from "../img/Pokemon-Logo-Schrift.png";
 import "../index.css";
+import { Link } from "react-router-dom";
 
 const Landingpage = () => {
   function handleClick() {
+    <Link to="pokemons"></Link>;
     console.log("ich wurde geklickt");
   }
 
