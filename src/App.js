@@ -39,7 +39,7 @@ const App = () => {
             element={<PokemonInfo data={data} pictures={pictures} />}
           />
           <Route
-            path=":id/:info"
+            path="/id/:info"
             element={<PokemonInfo data={data} pictures={pictures} />}
           />
         </Routes>

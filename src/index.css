@@ -50,6 +50,9 @@ button {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
   }
+  .App-logo2 {
+    animation: App-logo2-spin infinite 20s reverse;
+  }
 }
 
 .App-header {
@@ -76,37 +79,67 @@ button {
   }
 }
 
-.fff{
+@keyframes App-logo2-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(3600deg);
+  }
+}
+
+.fff {
   display: flex;
   float: left;
-  margin:10px 10px;
+  margin: 10px 10px;
   justify-content: space-around;
 }
 
-.buttonstyle{
+.buttonstyle {
   margin-right: 10px;
 }
 
-.stylecard{
+.stylecard {
   margin: 50px 50px;
-  
 }
 
-.stylebody{
-  display:flex;
+.stylebody {
+  display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  margin: 10px 0;
 }
 
-.buttonstyletwo{
+.buttonstyletwo {
   display: inline-block !important;
   justify-content: space-around;
 }
 
-.japanese{
+.japanese {
   background-color: red;
-  border: 2px solid black ;
-  color:white;
+  border: 2px solid black;
+  color: white;
   font-weight: bold;
+  height: 150px;
+}
+
+.logo-wrap {
+  display: flex;
+  justify-content: center;
+  border: 1px solid green;
+  height: auto;
+}
+
+.pokelogo {
+  margin: 5px 25px;
+  height: 50px;
+}
+.pokelogo2 {
+  margin: 5px 25px;
+  height: 50px;
+}
+
+.card-title {
+  margin: 20px 0;
 }

@@ -3,7 +3,7 @@ import { useParams, useNavigate } from "react-router-dom";
 import React from "react";
 
 const PokemonInfo = ({ data, pictures }) => {
-  const { info } = useParams();
+  const { id } = useParams();
   const navigate = useNavigate();
   const handleClick = () => {
     navigate(-1);
@@ -11,7 +11,7 @@ const PokemonInfo = ({ data, pictures }) => {
   console.log(data);
   console.log(pictures);
 
-  const findPokemon = data.find((poke) => info == poke.base);
+  const findPokemon = data.find((poke) => id == poke.base);
   console.log(findPokemon);
 
   return (
