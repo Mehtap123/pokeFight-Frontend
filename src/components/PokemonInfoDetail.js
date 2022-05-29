@@ -14,7 +14,7 @@ const PokemonInfo = ({ data, pictures }) => {
   const findPokemon = data.find((poke) => id == poke.id);
   console.log(findPokemon);
   return (
-    <>
+    <div>
       {findPokemon && (
         <div class="card stylecard">
           <div class="card-body stylebody">
@@ -28,7 +28,7 @@ const PokemonInfo = ({ data, pictures }) => {
             </h6>
 
             <h6 class="card-title">
-              1st Type: {findPokemon.type[0]} 2nd Type:{findPokemon.type[1]}{" "}
+              Defense: {findPokemon.base.Defense} Speed:{findPokemon.base.Speed}{" "}
             </h6>
             <div class="buttonstyletwo">
               <a href="#" class="btn btn-warning buttonstyle">
@@ -41,7 +41,7 @@ const PokemonInfo = ({ data, pictures }) => {
           </div>
         </div>
       )}
-    </>
+    </div>
   );
 };
 
