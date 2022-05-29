@@ -23,9 +23,9 @@ const PokemonInfo = ({ data, pictures }) => {
               <h2 class="card-body japanese">{findPokemon.name.japanese}</h2>
             </div>
 
-            <h6 class="card-title">
+            {/* <h6 class="card-title">
               HP:{findPokemon.base.HP} Attack: {findPokemon.base.Attack}
-            </h6>
+            </h6> */}
 
             <h6 class="card-title">
               1st Type: {findPokemon.type[0]} | 2nd Type:{findPokemon.type[1]}{" "}

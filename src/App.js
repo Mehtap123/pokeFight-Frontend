@@ -38,6 +38,10 @@ const App = () => {
             path=":id"
             element={<PokemonInfo data={data} pictures={pictures} />}
           />
+          <Route
+            path=":id/:info"
+            element={<PokemonInfo data={data} pictures={pictures} />}
+          />
         </Routes>
       ) : (
         "Loading...."
