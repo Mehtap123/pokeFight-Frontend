@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 
 const Landingpage = () => {
   function handleClick() {
-    <Link to="pokemons"></Link>;
+    <Link to="Pokemon"></Link>;
     console.log("ich wurde geklickt");
   }
 
