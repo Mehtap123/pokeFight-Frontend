@@ -28,14 +28,20 @@ const PokemonInfo = ({ data, pictures }) => {
             </h6>
 
             <h6 class="card-title">
-              1st Type: {findPokemon.type[0]} 2nd Type:{findPokemon.type[1]}{" "}
+              1st Type: {findPokemon.type[0]} | 2nd Type:{findPokemon.type[1]}{" "}
             </h6>
             <div class="buttonstyletwo">
               <a href="#" class="btn btn-warning buttonstyle">
                 Select
               </a>
-              <button onClick={handleClick} class="btn btn-warning">
+              <button
+                onClick={handleClick}
+                class="btn btn-secondary buttonstyle"
+              >
                 Back
+              </button>
+              <button onClick={handleClick} class="btn btn-warning">
+                Details
               </button>
             </div>
           </div>
