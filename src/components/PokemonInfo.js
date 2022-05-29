@@ -5,8 +5,12 @@ import React from "react";
 const PokemonInfo = ({ data, pictures }) => {
   const { id } = useParams();
   const navigate = useNavigate();
+  const handleClick = () => {
+    navigate(-1);
+  };
   console.log(data);
   console.log(pictures);
+
   const findPokemon = data.find((poke) => id == poke.id);
   console.log(findPokemon);
   return (
@@ -30,9 +34,9 @@ const PokemonInfo = ({ data, pictures }) => {
               <a href="#" class="btn btn-warning buttonstyle">
                 Select
               </a>
-              <a href="#" class="btn btn-warning">
+              <button onClick={handleClick} class="btn btn-warning">
                 Back
-              </a>
+              </button>
             </div>
           </div>
         </div>
