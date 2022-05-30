@@ -12,7 +12,7 @@ const PokemonInfo = ({ data, pictures }) => {
   console.log(data);
   console.log(pictures);
 
-  const findPokemon = data.find((poke) => id == poke.id);
+  const findPokemon = data.find((poke) => id === poke.id);
   console.log(findPokemon);
 
   return (
@@ -33,7 +33,10 @@ const PokemonInfo = ({ data, pictures }) => {
               Defense: {findPokemon.base.Defense} Speed:{findPokemon.base.Speed}{" "}
             </h6>
             <div className="buttonstyletwo">
-              <a href="#" className="btn btn-warning buttonstyle">
+              <a
+                href="https://www.google.de"
+                className="btn btn-warning buttonstyle"
+              >
                 Select
               </a>
               <button onClick={handleClick} className="btn btn-warning">
