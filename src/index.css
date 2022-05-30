@@ -11,23 +11,37 @@ body {
   align-items: center; */
   /* width: 1264px;
   height: 800px; */
-  background-color: yellow;
+  background-color: #ffcc00;
 }
 .pokemon {
-  margin-top: 5px;
+  /* margin-top: 5px; */
   background-image: url(./img/Pokemon-Logo-Schrift.png);
   background: no-repeat;
   background-size: cover;
 }
 
+.avatar {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
-button {
-  background-color: yellow;
-  border: none;
-  color: white;
+.button {
+  background-color: none;
+  color: blue;
+  border-style: solid 1px #ffcc00;
+}
+
+.btn {
+  background-color: #ffcc00;
+  color: #313131;
+  font-weight: bold;
+  text-transform: uppercase;
+  /* border: solid 1px #8a8a8a; */
+  box-shadow: -3px 4px 4px -2px rgba(0, 0, 0, 0.3);
 }
 
 .ball {
@@ -37,8 +51,16 @@ button {
   align-items: center;
 }
 
+.poke-title {
+  font-family: "Pokemon Solid", sans-serif;
+  color: #225ca9;
+}
 .App {
   text-align: center;
+  background-image: url(./img/592678.jpg);
+
+  height: 100vh;
+  background-size: cover;
 }
 
 .App-logo {
@@ -88,12 +110,12 @@ button {
   }
 }
 
-.fff {
+/* .fff {
   display: flex;
   float: left;
   margin: 10px 20px;
   justify-content: space-around;
-}
+} */
 
 .buttonstyle {
   margin-right: 10px;
@@ -109,6 +131,15 @@ button {
   align-items: center;
   flex-direction: column;
   margin: 10px 0;
+}
+
+.poke-card {
+  display: flex;
+  float: left;
+  margin: 10px 20px;
+  justify-content: space-around;
+  box-shadow: -6px 8px 7px -3px rgba(0, 0, 0, 0.3);
+  transition: 0.3s;
 }
 
 .buttonstyletwo {
@@ -163,5 +194,7 @@ button {
 }
 
 .pokemonschrift-wrap {
+  height: 5%;
   background-image: url(./img/592678.jpg);
+  box-shadow: -6px 8px 7px -3px rgba(0, 0, 0, 0.65);
 }

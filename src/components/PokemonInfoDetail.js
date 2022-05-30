@@ -12,7 +12,7 @@ const PokemonInfo = ({ data, pictures }) => {
   console.log(data);
   console.log(pictures);
 
-  const findPokemon = data.find((poke) => id === poke.id);
+  const findPokemon = data.find((poke) => id == poke.id);
   console.log(findPokemon);
 
   return (
@@ -20,7 +20,9 @@ const PokemonInfo = ({ data, pictures }) => {
       {findPokemon && (
         <div className="card stylecard">
           <div className="card-body stylebody">
-            <h1 className="card-title">{findPokemon.name.english}</h1>
+            <h1 className="card-title poke-title">
+              {findPokemon.name.english}
+            </h1>
             {/* <div className="card">
               <h2 className="card-body japanese">{findPokemon.name.japanese}</h2>
             </div> */}
