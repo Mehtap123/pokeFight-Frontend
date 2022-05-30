@@ -8,23 +8,21 @@ const Pokemon = ({ data, pictures }) => {
   return (
     <>
       <h1>Pokemon</h1>
-      
 
-      
-      {data.map((item) => (
+      {data.map((item, index) => (
+        <div className="card fff" style={{ width: "18rem" }} key={index}>
+          <div className="card-body">
+            <h4 className="card-title">{item.name.english}</h4>
 
-        <div class="card fff" style={{ width: "18rem" }}>
-        
-        <div class="card-body">
-          <h4 class="card-title">{item.name.english}</h4>
-          
-        
-          <a href="#" class="btn btn-warning buttonstyle">Select</a>
-          <a href="#" class="btn btn-warning">More Info</a>
+            <a href="#" className="btn btn-warning buttonstyle">
+              Select
+            </a>
+            <Link to={`${item.id}`} className="btn btn-warning buttonstyle">
+              More Info
+            </Link>
+          </div>
         </div>
-      </div>
       ))}
-      
     </>
   );
 };

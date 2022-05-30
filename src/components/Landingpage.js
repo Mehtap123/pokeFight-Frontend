@@ -4,10 +4,7 @@ import "../index.css";
 import { Link } from "react-router-dom";
 
 const Landingpage = () => {
-  function handleClick() {
-    <Link to="Pokemon"></Link>;
-    console.log("ich wurde geklickt");
-  }
+  console.log("ich wurde geklickt");
 
   return (
     <div className="App">
@@ -15,16 +12,16 @@ const Landingpage = () => {
         <img src={pokemon} alt="pokemon" width={955} />
       </div>
       <div className="ball">
-        <button onClick={handleClick}>
+        <Link to="pokemons">
           <img
             src={logo}
             alt="Bild"
             height={555}
             width={555}
-            onClick={handleClick}
             className="App-logo"
           />
-        </button>
+        </Link>
+        ;
       </div>
     </div>
   );

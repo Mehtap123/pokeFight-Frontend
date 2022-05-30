@@ -4,15 +4,14 @@ import Landingpage from "./components/Landingpage";
 import Pokemon from "./components/Pokemon";
 import { Routes, Route } from "react-router-dom";
 import PokemonInfo from "./components/PokemonInfo";
+import PokemonInfoDetail from "./components/PokemonInfoDetail";
 
 const App = () => {
   const [data, setData] = useState([]);
   const [pokePics, setPokePics] = useState([]);
 
   useEffect(() => {
-    fetch(
-      "https://raw.githubusercontent.com/fanzeyi/pokemon.json/master/pokedex.json"
-    )
+    fetch("https://pokeapp728.herokuapp.com/api/pokemon")
       .then((res) => res.json())
       .then((data) => setData(data))
       .then(
@@ -35,12 +34,12 @@ const App = () => {
             element={<Pokemon data={data} pictures={pictures} />}
           />
           <Route
-            path=":id"
+            path="pokemons/:id"
             element={<PokemonInfo data={data} pictures={pictures} />}
           />
           <Route
-            path="/id/:info"
-            element={<PokemonInfo data={data} pictures={pictures} />}
+            path="pokemons/:id/info"
+            element={<PokemonInfoDetail data={data} pictures={pictures} />}
           />
         </Routes>
       ) : (
