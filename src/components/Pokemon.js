@@ -1,6 +1,4 @@
 import { Link } from "react-router-dom";
-import { useState, useEffect } from "react";
-import { Card, Button } from "react-bootstrap";
 
 const Pokemon = ({ data, pictures }) => {
   console.log(data);
@@ -14,7 +12,10 @@ const Pokemon = ({ data, pictures }) => {
           <div className="card-body">
             <h4 className="card-title">{item.name.english}</h4>
 
-            <a href="#" className="btn btn-warning buttonstyle">
+            <a
+              href="https://www.google.de"
+              className="btn btn-warning buttonstyle"
+            >
               Select
             </a>
             <Link to={`${item.id}`} className="btn btn-warning buttonstyle">

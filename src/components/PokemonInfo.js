@@ -1,6 +1,5 @@
-import { useParams, Link, useNavigate } from "react-router-dom";
-import logo from "../logo.svg";
-import logo2 from "../logo2.svg";
+import { useParams, Link} from "react-router-dom";
+
 import "../index.css";
 
 import React from "react";
@@ -14,7 +13,7 @@ const PokemonInfo = ({ data, pictures }) => {
   console.log(data);
   console.log(pictures);
 
-  const findPokemon = data.find((poke) => id == poke.id);
+  const findPokemon = data.find((poke) => id === poke.id);
   console.log(findPokemon);
 
   return (
@@ -58,7 +57,7 @@ const PokemonInfo = ({ data, pictures }) => {
                 {findPokemon.type[1]}
               </h4>
               <div className="buttonstyletwo">
-                <a href="#" className="btn btn-warning buttonstyle">
+                <a href="https://www.google.de" className="btn btn-warning buttonstyle">
                   Select
                 </a>
                 <Link to="/pokemons" className="btn btn-warning buttonstyle">
