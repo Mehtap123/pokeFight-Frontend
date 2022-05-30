@@ -1,4 +1,4 @@
-import { useParams, Link} from "react-router-dom";
+import { useParams, Link } from "react-router-dom";
 
 import "../index.css";
 
@@ -19,7 +19,7 @@ const PokemonInfo = ({ data, pictures }) => {
   return (
     <>
       {findPokemon && (
-        <div className="card stylecard">
+        <div className="card stylecard info">
           <div className="stylebody">
             <h1 className="card-title">{findPokemon.name.english}</h1>
             <div>
@@ -57,7 +57,10 @@ const PokemonInfo = ({ data, pictures }) => {
                 {findPokemon.type[1]}
               </h4>
               <div className="buttonstyletwo">
-                <a href="https://www.google.de" className="btn btn-warning buttonstyle">
+                <a
+                  href="https://www.google.de"
+                  className="btn btn-warning buttonstyle"
+                >
                   Select
                 </a>
                 <Link to="/pokemons" className="btn btn-warning buttonstyle">

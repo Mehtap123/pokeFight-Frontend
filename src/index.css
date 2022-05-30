@@ -91,7 +91,7 @@ button {
 .fff {
   display: flex;
   float: left;
-  margin: 10px 10px;
+  margin: 10px 20px;
   justify-content: space-around;
 }
 
@@ -142,4 +142,26 @@ button {
 
 .card-title {
   margin: 20px 0;
+  display: flex;
+  justify-content: center;
+}
+
+.btn-poke {
+  display: flex;
+  justify-content: center;
+}
+
+.info {
+  background-image: url(./img/592678.jpg);
+  background-repeat: no-repeat;
+}
+
+.pokemonschrift {
+  display: flex;
+  justify-content: center;
+  margin: 10px 0;
+}
+
+.pokemonschrift-wrap {
+  background-image: url(./img/592678.jpg);
 }
