@@ -121,14 +121,14 @@ button {
   border: 2px solid black;
   color: white;
   font-weight: bold;
-  height: 150px;
+  height: 70px;
 }
 
 .logo-wrap {
   display: flex;
   justify-content: center;
-  border: 1px solid green;
-  height: auto;
+
+  height: 70px;
 }
 
 .pokelogo {
