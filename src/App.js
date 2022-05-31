@@ -10,8 +10,16 @@ const App = () => {
   const [data, setData] = useState([]);
   const [pokePics, setPokePics] = useState([]);
 
+  const [searchWord, setSearchWord] = useState();
+  const handleChange = (e) => {
+    setSearchWord(e.target.value);
+  };
+
   useEffect(() => {
-    fetch("https://pokeapp728.herokuapp.com/api/pokemon")
+    // fetch("https://pokeapp728.herokuapp.com/api/pokemon/search?query=${searchWord}")
+    fetch(
+      "https://raw.githubusercontent.com/fanzeyi/pokemon.json/master/pokedex.json"
+    )
       .then((res) => res.json())
       .then((data) => setData(data))
       .then(
@@ -20,12 +28,22 @@ const App = () => {
           .then((pokeResponse) => setPokePics(pokeResponse))
       )
       .catch((error) => console.log(error));
-  }, []);
+  }, [searchWord]);
 
   const pictures = pokePics.results;
 
   return (
     <>
+      <div id="searchbar">
+        <input
+          id="inputtext"
+          type="text"
+          placeholder="search for pokemon"
+          value={searchWord}
+          onChange={handleChange}
+        />
+      </div>
+
       {pictures ? (
         <Routes>
           <Route path="/" element={<Landingpage />} />
