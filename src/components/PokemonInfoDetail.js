@@ -44,10 +44,10 @@ const PokemonInfo = ({ data, pictures }) => {
                   </thead>
                   <tbody>
                     <tr>
-                      <td>{findPokemon.base.HP}</td>
                       <td>{findPokemon.base.Attack}</td>
                       <td>{findPokemon.base.Defense} </td>
                       <td>{findPokemon.base.Speed}</td>
+                      <td>{findPokemon.base.HP}</td>
                     </tr>
                   </tbody>
                 </table>
