@@ -36,10 +36,10 @@ const PokemonInfo = ({ data, pictures }) => {
                 <table class="table table-striped table-sm">
                   <thead>
                     <tr>
-                      <th scope="col">HP</th>
                       <th scope="col">Attack</th>
                       <th scope="col">Defense</th>
                       <th scope="col">Speed</th>
+                      <th scope="col">HP</th>
                     </tr>
                   </thead>
                   <tbody>

@@ -11,7 +11,7 @@ const Landingpage = () => {
   return (
     <>
       <div className="App">
-        <ReactAudioPlayer src={song} autoPlay controls />
+        <ReactAudioPlayer src={song} autoplay controls />
         <div className="pokemon">
           <img src={pokemon} alt="pokemon" width={955} />
         </div>
