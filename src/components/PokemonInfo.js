@@ -1,6 +1,7 @@
 import { useParams, Link } from "react-router-dom";
 import pokemon from "../img/Pokemon-Logo-Schrift.png";
 import "../index.css";
+import Bild from "../img/592678.jpg";
 
 import React from "react";
 
@@ -25,10 +26,12 @@ const PokemonInfo = ({ data, pictures }) => {
         {findPokemon && (
           <div className="card stylecard ">
             <div className="stylebody">
-              <h1 className="card-title">{findPokemon.name.english}</h1>
-              <div>
-                <div className="logo-wrap">
-                  {/* <div className="pokelogo">
+              <h1 className="card-title poke-title">
+                {findPokemon.name.english}
+              </h1>
+              {/* <div>
+                <div className="logo-wrap"> */}
+              {/* <div className="pokelogo">
                   <img
                     src={logo}
                     alt="Bild"
@@ -38,8 +41,8 @@ const PokemonInfo = ({ data, pictures }) => {
                     classNameName="App-logo"
                   />
                 </div> */}
-                  <h2 className="japanese">{findPokemon.name.japanese}</h2>
-                  {/* <div className="pokelogo2">
+              {/* <h2 className="japanese">{findPokemon.name.japanese}</h2> */}
+              {/* <div className="pokelogo2">
                   <img
                     src={logo2}
                     alt="Bild"
@@ -49,12 +52,17 @@ const PokemonInfo = ({ data, pictures }) => {
                     className="App-logo2"
                   />
                 </div> */}
-                </div>
-              </div>
+              {/* </div>
+              </div> */}
 
               {/* <h6 className="card-title">
               HP:{findPokemon.base.HP} Attack: {findPokemon.base.Attack}
             </h6> */}
+              <img
+                src={Bild}
+                className="rounded mx-auto d-block img-detail"
+                alt="..."
+              ></img>
               <div className="stylebody">
                 <h4 className="card-title">
                   1st Type: {findPokemon.type[0]} | 2nd Type:{" "}

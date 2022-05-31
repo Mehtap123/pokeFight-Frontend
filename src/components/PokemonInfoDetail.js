@@ -33,13 +33,27 @@ const PokemonInfo = ({ data, pictures }) => {
             </div> */}
 
               <h6 className="card-title">
-                HP:{findPokemon.base.HP} Attack: {findPokemon.base.Attack}
+                <table class="table table-striped table-sm">
+                  <thead>
+                    <tr>
+                      <th scope="col">Attack</th>
+                      <th scope="col">Defense</th>
+                      <th scope="col">Speed</th>
+                      <th scope="col">HP</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>{findPokemon.base.Attack}</td>
+                      <td>{findPokemon.base.Defense} </td>
+                      <td>{findPokemon.base.Speed}</td>
+                      <td>{findPokemon.base.HP}</td>
+                    </tr>
+                  </tbody>
+                </table>
               </h6>
 
-              <h6 className="card-title">
-                Defense: {findPokemon.base.Defense} Speed:
-                {findPokemon.base.Speed}{" "}
-              </h6>
+              <h6 className="card-title"> </h6>
               <div className="buttonstyletwo">
                 <a
                   href="https://www.google.de"

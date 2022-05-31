@@ -5,15 +5,17 @@ import Pokemon from "./components/Pokemon";
 import { Routes, Route } from "react-router-dom";
 import PokemonInfo from "./components/PokemonInfo";
 import PokemonInfoDetail from "./components/PokemonInfoDetail";
+import SearchBar from "./components/SearchBar";
+
 
 const App = () => {
   const [data, setData] = useState([]);
   const [pokePics, setPokePics] = useState([]);
 
-  const [searchWord, setSearchWord] = useState();
-  const handleChange = (e) => {
-    setSearchWord(e.target.value);
-  };
+  // const [searchWord, setSearchWord] = useState();
+  // const handleChange = (e) => {
+  //   setSearchWord(e.target.value);
+  // };
 
   useEffect(() => {
     // fetch("https://pokeapp728.herokuapp.com/api/pokemon/search?query=${searchWord}")
@@ -28,13 +30,13 @@ const App = () => {
           .then((pokeResponse) => setPokePics(pokeResponse))
       )
       .catch((error) => console.log(error));
-  }, [searchWord]);
+  }, []);
 
   const pictures = pokePics.results;
 
   return (
     <>
-      <div id="searchbar">
+      {/* <div id="searchbar">
         <input
           id="inputtext"
           type="text"
@@ -42,7 +44,7 @@ const App = () => {
           value={searchWord}
           onChange={handleChange}
         />
-      </div>
+      </div> */}
 
       {pictures ? (
         <Routes>

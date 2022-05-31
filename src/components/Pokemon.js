@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import pokemon from "../img/Pokemon-Logo-Schrift.png";
 import pikachu from "../img/pikachu.png";
-import { handleChange, searchWord } from "../App";
+import SearchBar from "./SearchBar";
 
 const Pokemon = ({ data, pictures }) => {
   console.log(data);
@@ -12,6 +12,7 @@ const Pokemon = ({ data, pictures }) => {
         <div className="pokemonschrift">
           <img src={pokemon} alt="Bild" height={225} />
         </div>
+        <SearchBar />
 
         {data.map((item, index) => (
           <div
