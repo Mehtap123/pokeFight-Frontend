@@ -1,4 +1,5 @@
 import { useParams, useNavigate } from "react-router-dom";
+import pokemon from "../img/Pokemon-Logo-Schrift.png";
 
 import React from "react";
 
@@ -16,39 +17,45 @@ const PokemonInfo = ({ data, pictures }) => {
   console.log(findPokemon);
 
   return (
-    <div>
-      {findPokemon && (
-        <div className="card stylecard">
-          <div className="card-body stylebody">
-            <h1 className="card-title poke-title">
-              {findPokemon.name.english}
-            </h1>
-            {/* <div className="card">
+    <>
+      <div className="pokemonschrift-wrap">
+        <div className="pokemonschrift">
+          <img src={pokemon} alt="Bild" height={225} />
+        </div>
+        {findPokemon && (
+          <div className="card stylecard">
+            <div className="card-body stylebody">
+              <h1 className="card-title poke-title">
+                {findPokemon.name.english}
+              </h1>
+              {/* <div className="card">
               <h2 className="card-body japanese">{findPokemon.name.japanese}</h2>
             </div> */}
 
-            <h6 className="card-title">
-              HP:{findPokemon.base.HP} Attack: {findPokemon.base.Attack}
-            </h6>
+              <h6 className="card-title">
+                HP:{findPokemon.base.HP} Attack: {findPokemon.base.Attack}
+              </h6>
 
-            <h6 className="card-title">
-              Defense: {findPokemon.base.Defense} Speed:{findPokemon.base.Speed}{" "}
-            </h6>
-            <div className="buttonstyletwo">
-              <a
-                href="https://www.google.de"
-                className="btn btn-warning buttonstyle"
-              >
-                Select
-              </a>
-              <button onClick={handleClick} className="btn btn-warning">
-                Back
-              </button>
+              <h6 className="card-title">
+                Defense: {findPokemon.base.Defense} Speed:
+                {findPokemon.base.Speed}{" "}
+              </h6>
+              <div className="buttonstyletwo">
+                <a
+                  href="https://www.google.de"
+                  className="btn btn-warning buttonstyle"
+                >
+                  Select
+                </a>
+                <button onClick={handleClick} className="btn btn-warning">
+                  Back
+                </button>
+              </div>
             </div>
           </div>
-        </div>
-      )}
-    </div>
+        )}
+      </div>
+    </>
   );
 };
 

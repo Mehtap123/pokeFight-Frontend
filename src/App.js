@@ -18,7 +18,7 @@ const App = () => {
   useEffect(() => {
     // fetch("https://pokeapp728.herokuapp.com/api/pokemon/search?query=${searchWord}")
     fetch(
-      "https://raw.githubusercontent.com/fanzeyi/pokemon.json/master/pokedex.json/search?query=${searchWord}"
+      "https://raw.githubusercontent.com/fanzeyi/pokemon.json/master/pokedex.json"
     )
       .then((res) => res.json())
       .then((data) => setData(data))

@@ -1,5 +1,5 @@
 import { useParams, Link } from "react-router-dom";
-import pokemon from "../img/592678.jpg";
+import pokemon from "../img/Pokemon-Logo-Schrift.png";
 import "../index.css";
 
 import React from "react";
@@ -17,14 +17,14 @@ const PokemonInfo = ({ data, pictures }) => {
   console.log(findPokemon);
 
   return (
-    <div>
-      {findPokemon && (
-        <div className="card stylecard ">
-          <div className="stylebody">
-            <div className="pokemonschrift-wrap">
-              <div className="pokemonschrift">
-                <img src={pokemon} alt="Bild" height={225} />
-              </div>
+    <>
+      <div className="pokemonschrift-wrap">
+        <div className="pokemonschrift">
+          <img src={pokemon} alt="Bild" height={225} />
+        </div>
+        {findPokemon && (
+          <div className="card stylecard ">
+            <div className="stylebody">
               <h1 className="card-title">{findPokemon.name.english}</h1>
               <div>
                 <div className="logo-wrap">
@@ -80,9 +80,9 @@ const PokemonInfo = ({ data, pictures }) => {
               </div>
             </div>
           </div>
-        </div>
-      )}
-    </div>
+        )}
+      </div>
+    </>
   );
 };
 

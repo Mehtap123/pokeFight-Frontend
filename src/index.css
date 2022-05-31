@@ -194,7 +194,7 @@ code {
 }
 
 .pokemonschrift-wrap {
-  height: 5%;
+  height: 200px;
   background-image: url(./img/592678.jpg);
   box-shadow: -6px 8px 7px -3px rgba(0, 0, 0, 0.65);
 }
