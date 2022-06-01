@@ -10,7 +10,7 @@ import SearchBar from "./components/SearchBar";
 
 const App = () => {
   const [data, setData] = useState([]);
-  const [pokePics, setPokePics] = useState([]);
+  
 
   // const [searchWord, setSearchWord] = useState();
   // const handleChange = (e) => {
@@ -24,15 +24,10 @@ const App = () => {
     )
       .then((res) => res.json())
       .then((data) => setData(data))
-      .then(
-        fetch("https://pokeapi.co/api/v2/pokemon?limit=1200")
-          .then((res) => res.json())
-          .then((pokeResponse) => setPokePics(pokeResponse))
-      )
       .catch((error) => console.log(error));
   }, []);
 
-  const pictures = pokePics.results;
+
 
   return (
     <>
@@ -46,20 +41,20 @@ const App = () => {
         />
       </div> */}
 
-      {pictures ? (
+      {data ? (
         <Routes>
           <Route path="/" element={<Landingpage />} />
           <Route
             path="pokemons"
-            element={<Pokemon data={data} pictures={pictures} />}
+            element={<Pokemon data={data}  />}
           />
           <Route
             path="pokemons/:id"
-            element={<PokemonInfo data={data} pictures={pictures} />}
+            element={<PokemonInfo data={data}  />}
           />
           <Route
             path="pokemons/:id/info"
-            element={<PokemonInfoDetail data={data} pictures={pictures} />}
+            element={<PokemonInfoDetail data={data} />}
           />
         </Routes>
       ) : (

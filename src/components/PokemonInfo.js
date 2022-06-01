@@ -59,7 +59,7 @@ const PokemonInfo = ({ data, pictures }) => {
               HP:{findPokemon.base.HP} Attack: {findPokemon.base.Attack}
             </h6> */}
               <img
-                src={Bild}
+                src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${id}.png`}
                 className="rounded mx-auto d-block img-detail"
                 alt="..."
               ></img>
