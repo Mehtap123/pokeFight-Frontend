@@ -17,7 +17,8 @@ body {
   /* margin-top: 5px; */
   background-image: url(./img/Pokemon-Logo-Schrift.png);
   background: no-repeat;
-  background-size: cover;
+  max-width: 100%;
+  height: 100%;
 }
 
 .avatar {
@@ -44,8 +45,13 @@ code {
   box-shadow: -3px 4px 4px -2px rgba(0, 0, 0, 0.3);
 }
 
+.img-res {
+  width: auto;
+  height: auto;
+}
+
 .ball {
-  margin-top: -145px;
+  /* margin-top: -145px; */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -58,8 +64,8 @@ code {
 }
 .App {
   text-align: center;
-  background-image: url(./img/592678.jpg);
-
+  /* background-image: url(./img/592678.jpg); */
+  align-items: center;
   height: 100vh;
   background-size: cover;
 }
@@ -187,16 +193,26 @@ code {
   background-repeat: no-repeat;
 }
 
+.bg {
+  background-image: url(./img/592678.jpg);
+  background-size: cover;
+  height: 100%;
+}
+
 .pokemonschrift {
-  display: flex;
+  padding-top: 5px;
+  width: 60%;
+  height: auto;
   justify-content: center;
-  margin: 10px 0;
 }
 
 .pokemonschrift-wrap {
-  height: 200px;
+  height: auto;
   background-image: url(./img/592678.jpg);
+  background-size: cover;
   box-shadow: -6px 8px 7px -3px rgba(0, 0, 0, 0.65);
+  margin-bottom: 30px;
+  justify-content: center;
 }
 
 .img-detail {

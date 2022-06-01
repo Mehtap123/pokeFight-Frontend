@@ -11,20 +11,21 @@ const Landingpage = () => {
   return (
     <>
       <div className="App">
-        <ReactAudioPlayer src={song} autoplay controls />
-        <div className="pokemon">
-          <img src={pokemon} alt="pokemon" width={955} />
-        </div>
-        <div className="ball">
-          <Link to="pokemons">
-            <img
-              src={logo}
-              alt="Bild"
-              height={555}
-              width={555}
-              className="App-logo"
-            />
-          </Link>
+        {/* <ReactAudioPlayer src={song} autoplay controls /> */}
+        <div className="pokemon bg">
+          <img src={pokemon} alt="pokemon" className="pokemonschrift" />
+
+          <div className="ball">
+            <Link to="pokemons">
+              <img
+                src={logo}
+                alt="Bild"
+                height={555}
+                width={555}
+                className="App-logo"
+              />
+            </Link>
+          </div>
         </div>
       </div>
     </>

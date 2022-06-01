@@ -27,11 +27,28 @@ const Pokemon = ({ data }) => {
   
   return (
     <>
-      <div className="pokemonschrift-wrap">
-        <div className="pokemonschrift">
-          <img src={pokemon} alt="Bild" height={225} />
-        </div>
-        <SearchBar />
+      <div className="pokemonschrift-wrap ">
+        <Link to="/">
+          <img src={pokemon} alt="Bild" className="pokemonschrift" />
+        </Link>
+      </div>
+      <SearchBar />
+
+
+      {data.map((item, index) => (
+        <div className="card poke-card" style={{ width: "18rem" }} key={index}>
+          <div className="card-body">
+            <h4 className="card-title poke-title">{item.name.english}</h4>
+            <div className="avatar">
+              <img src={pikachu} alt="pikachu" className="fluid" width={50} />
+            </div>
+            <div className="btn-poke">
+              <a href="https://www.google.de" className="btn  buttonstyle ">
+                Select
+              </a>
+              <Link to={`${item.id}`} className="btn buttonstyle ">
+                Info
+              </Link>
 
         {data.map((item, index) => (
           <div
@@ -52,10 +69,11 @@ const Pokemon = ({ data }) => {
                   Info
                 </Link>
               </div>
+
             </div>
           </div>
-        ))}
-      </div>
+        </div>
+      ))}
     </>
   );
 };
