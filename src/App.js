@@ -5,6 +5,7 @@ import Pokemon from "./components/Pokemon";
 import { Routes, Route } from "react-router-dom";
 import PokemonInfo from "./components/PokemonInfo";
 import PokemonInfoDetail from "./components/PokemonInfoDetail";
+import Fight from "./components/Fight";
 import SearchBar from "./components/SearchBar";
 
 
@@ -55,6 +56,10 @@ const App = () => {
           <Route
             path="pokemons/:id/info"
             element={<PokemonInfoDetail data={data} />}
+          />
+          <Route
+            path="pokemons/:id/fight"
+            element={<Fight data={data} pictures={pictures} />}
           />
         </Routes>
       ) : (
