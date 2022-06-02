@@ -108,14 +108,11 @@ const Fight = ({ data }) => {
                 >
                   Select
                 </a> */}
-                  <button onClick={handleClick} className="btn btn-warning">
-                    <Link
-                      to="/pokemons"
-                      className="btn btn-warning buttonstyle"
-                    >
-                      Back
-                    </Link>
-                  </button>
+                  {/* <button onClick={handleClick} className="btn btn-warning"> */}
+                  <Link to="/pokemons" className="btn btn-warning buttonstyle">
+                    Back
+                  </Link>
+                  {/* </button> */}
                 </div>
               </div>
             </div>

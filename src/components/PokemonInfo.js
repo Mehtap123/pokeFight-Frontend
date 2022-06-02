@@ -68,13 +68,13 @@ const PokemonInfo = ({ data, pictures }) => {
                   1st Type: {findPokemon.type[0]} | 2nd Type:{" "}
                   {findPokemon.type[1]}
                 </h4>
-                <div className="buttonstyletwo">                  
+                <div className="buttonstyletwo">
                   <Link to="/pokemons" className="btn btn-warning buttonstyle">
                     Back
                   </Link>
                   <Link
                     to={`/pokemons/${findPokemon.id}/fight`}
-                    className="btn btn-warning"
+                    className="btn btn-warning buttonstyle"
                   >
                     Click here to fight
                   </Link>

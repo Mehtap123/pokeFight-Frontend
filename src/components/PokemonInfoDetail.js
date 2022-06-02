@@ -1,4 +1,4 @@
-import { useParams, useNavigate } from "react-router-dom";
+import { useParams, useNavigate, Link } from "react-router-dom";
 import pokemon from "../img/Pokemon-Logo-Schrift.png";
 
 import React from "react";
@@ -55,12 +55,12 @@ const PokemonInfo = ({ data, pictures }) => {
 
               <h6 className="card-title"> </h6>
               <div className="buttonstyletwo">
-                <a
-                  href="https://www.google.de"
+                <Link
+                  to={`/pokemons/${findPokemon.id}/fight`}
                   className="btn btn-warning buttonstyle"
                 >
                   Select
-                </a>
+                </Link>
                 <button onClick={handleClick} className="btn btn-warning">
                   Back
                 </button>
