@@ -58,9 +58,12 @@ const Pokemon = ({ data }) => {
               />
             </div>
             <div className="btn-poke">
-              <a href="https://www.google.de" className="btn  buttonstyle ">
+              <Link
+                to={`/pokemons/${item.id}/fight`}
+                className="btn btn-warning buttonstyle"
+              >
                 Select
-              </a>
+              </Link>
               <Link to={`${item.id}`} className="btn buttonstyle ">
                 Info
               </Link>
@@ -68,7 +71,6 @@ const Pokemon = ({ data }) => {
           </div>
         </div>
       ))}
-      );
     </>
   );
 };
