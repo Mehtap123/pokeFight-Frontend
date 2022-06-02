@@ -1,4 +1,4 @@
-import { useParams, useNavigate } from "react-router-dom";
+import { useParams, useNavigate, Link } from "react-router-dom";
 import pokemon from "../img/Pokemon-Logo-Schrift.png";
 import swal from "sweetalert";
 import logo from "../logo.svg";
@@ -109,7 +109,12 @@ const Fight = ({ data }) => {
                   Select
                 </a> */}
                   <button onClick={handleClick} className="btn btn-warning">
-                    Back
+                    <Link
+                      to="/pokemons"
+                      className="btn btn-warning buttonstyle"
+                    >
+                      Back
+                    </Link>
                   </button>
                 </div>
               </div>

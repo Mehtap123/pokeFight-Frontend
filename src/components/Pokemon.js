@@ -68,7 +68,6 @@ const Pokemon = ({ data }) => {
           </div>
         </div>
       ))}
-      );
     </>
   );
 };

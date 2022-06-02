@@ -10,7 +10,7 @@ const SearchBar = () => {
   useEffect(() => {
     // fetch("https://pokeapp728.herokuapp.com/api/pokemon/search?query=${searchWord}")
     fetch(
-      "https://raw.githubusercontent.com/fanzeyi/pokemon.json/master/pokedex.json"
+      "https://raw.githubusercontent.com/fanzeyi/pokemon.json/master/pokedex/search?query=${searchWord}.json"
     )
       .then((res) => res.json())
       .then((data) => setData(data))
