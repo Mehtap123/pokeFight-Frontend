@@ -38,7 +38,7 @@ const App = () => {
         />
       </div> */}
 
-      {data ? (
+      {data.length > 0 ? (
         <Routes>
           <Route path="/" element={<Landingpage />} />
           <Route path="pokemons" element={<Pokemon data={data} />} />
