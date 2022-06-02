@@ -226,3 +226,46 @@ code {
   display: flex;
   justify-content: center;
 }
+
+.btn-fight {
+  background-color: rgb(240, 4, 4);
+  color: white;
+  height: fit-content;
+  flex-direction: column;
+  justify-content: center;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  font-size: 53px;
+  width: auto;
+}
+
+/* -------SweetAlert--------- */
+
+.swal-overlay {
+  background-color: rgba(165, 43, 84, 0.9);
+  background-image: url(./img/flash.png);
+}
+
+.fight {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.fight-wrap {
+  display: inline-flex;
+  width: 100%;
+  justify-content: space-around;
+  /* float: left; */
+}
+
+.stylebody-fight {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 10px 0;
+}
+
+.card-fight {
+  min-width: 400px;
+}
