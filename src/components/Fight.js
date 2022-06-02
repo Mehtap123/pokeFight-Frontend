@@ -5,14 +5,13 @@ import swal from 'sweetalert';
 
 import React from "react";
 
-const Fight = ({ data, pictures }) => {
+const Fight = ({ data }) => {
   const { id } = useParams();
   console.log(id);
   const navigate = useNavigate();
   const handleClick = () => {
     navigate(-2);
   };
-
 
   const findPokemon = data.find((poke) => id == poke.id);
   console.log(findPokemon);
@@ -26,7 +25,9 @@ function getRandomPokemon() {
 const Opponent = data[getRandomPokemon()]
 
  // {data[getRandomPokemon()].name.english}
-
+const handleNewOpponent = (event) => {
+  window.location.reload()
+}
 
 
 //fighting logic:
@@ -153,6 +154,9 @@ else if (enduranceYours < enduranceOpponent) {swal("You lost!")}}
               </button>
               <button onClick={handleFight} className="btn btn-warning">
                 Fight
+              </button>
+              <button onClick={handleNewOpponent} className="btn btn-warning">
+                new opponent
               </button>
             </div>
           </div>
