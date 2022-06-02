@@ -8,10 +8,8 @@ import PokemonInfoDetail from "./components/PokemonInfoDetail";
 import Fight from "./components/Fight";
 import SearchBar from "./components/SearchBar";
 
-
 const App = () => {
   const [data, setData] = useState([]);
-  
 
   // const [searchWord, setSearchWord] = useState();
   // const handleChange = (e) => {
@@ -28,8 +26,6 @@ const App = () => {
       .catch((error) => console.log(error));
   }, []);
 
-
-
   return (
     <>
       {/* <div id="searchbar">
@@ -45,22 +41,13 @@ const App = () => {
       {data ? (
         <Routes>
           <Route path="/" element={<Landingpage />} />
-          <Route
-            path="pokemons"
-            element={<Pokemon data={data}  />}
-          />
-          <Route
-            path="pokemons/:id"
-            element={<PokemonInfo data={data}  />}
-          />
+          <Route path="pokemons" element={<Pokemon data={data} />} />
+          <Route path="pokemons/:id" element={<PokemonInfo data={data} />} />
           <Route
             path="pokemons/:id/info"
             element={<PokemonInfoDetail data={data} />}
           />
-          <Route
-            path="pokemons/:id/fight"
-            element={<Fight data={data} pictures={pictures} />}
-          />
+          <Route path="pokemons/:id/fight" element={<Fight data={data} />} />
         </Routes>
       ) : (
         "Loading...."

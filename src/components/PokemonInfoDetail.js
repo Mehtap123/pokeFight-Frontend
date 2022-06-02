@@ -3,9 +3,6 @@ import pokemon from "../img/Pokemon-Logo-Schrift.png";
 
 import React from "react";
 
-
-
-
 const PokemonInfo = ({ data, pictures }) => {
   const { id } = useParams();
   console.log(id);
