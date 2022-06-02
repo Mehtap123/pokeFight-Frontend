@@ -1,6 +1,8 @@
 import { useParams, useNavigate } from "react-router-dom";
 import pokemon from "../img/Pokemon-Logo-Schrift.png";
 import swal from 'sweetalert';
+import axios from "axios";
+import { useEffect, useState } from "react";
 
 
 import React from "react";
@@ -17,43 +19,60 @@ const Fight = ({ data }) => {
   console.log(findPokemon);
 
 //find opponent:
-
 function getRandomPokemon() {
     return Math.floor(Math.random() * 809);
   }
   console.log(getRandomPokemon());
 const Opponent = data[getRandomPokemon()]
 
- // {data[getRandomPokemon()].name.english}
+ //find new opponent
 const handleNewOpponent = (event) => {
   window.location.reload()
 }
+//fetch leaderboard
+const [oldHighscore, setOldHighscore] = useState([]);
 
+useEffect(() => {
+    axios.get("https://pokeapp728.herokuapp.com/api/game/leaderboard")
+    .then(res =>{
+    setOldHighscore(res.data.pokemons)
+    })
+    .catch((error) => console.log(error));
+    }, []);
+console.log(oldHighscore);
+
+//Check if Pokemon is already in Leaderboard:
+const pokemonInLeaderboard = oldHighscore.find(pokemon => pokemon.name === findPokemon.name.english);
+
+console.log(pokemonInLeaderboard)
+let InLeaderboardId = []
+if (pokemonInLeaderboard){InLeaderboardId = pokemonInLeaderboard._id}
+console.log(InLeaderboardId)
 
 //fighting logic:
-
 const enduranceYours = findPokemon.base.HP*findPokemon.base.Defense/Opponent.base.Attack
 const enduranceOpponent = Opponent.base.HP*Opponent.base.Defense/findPokemon.base.Attack
 
+//Declare winner and put/post into database after clicking button:
 const handleFight = (event) => {
-if (enduranceYours > enduranceOpponent){swal("You won!")}
+if (enduranceYours > enduranceOpponent){
+  swal("You won!");
+  const newHighscore = pokemonInLeaderboard.highscore+1
+  const newEntry = {
+    name: findPokemon.name.english,
+    highscore: newHighscore,
+  };  
+  if (pokemonInLeaderboard){
+    axios.put(
+    `https://pokeapp728.herokuapp.com/api/game/leaderboard/${InLeaderboardId}`,
+    newEntry)
+    } else {
+    axios.post(
+    "https://pokeapp728.herokuapp.com/api/game/save",
+    newEntry)
+    }
+}
 else if (enduranceYours < enduranceOpponent) {swal("You lost!")}}
-
-// pokemon yours
-//(hp*defense)/opponentAttack = enduranceYours
-
-//pokemon opponent
-//(hp<opponent*defenseOpponent)/attack = enduranceOpponent
-
-// if (enduranceYours > enduranceOpponent){console.log("Your pokemon won!"")}
-// else if (enduranceYours = enduranceOpponent){console.log("It's a tie!")}
-// else {console.log("You lost!")}
-
-
-
-
-
-
 
 
   return (
