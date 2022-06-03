@@ -54,9 +54,8 @@ const enduranceYours = findPokemon.base.HP*findPokemon.base.Defense/Opponent.bas
 const enduranceOpponent = Opponent.base.HP*Opponent.base.Defense/findPokemon.base.Attack
 
 //Declare winner and put/post into database after clicking button:
-let wurdeSchonGekampft = false
+
 const handleFight = (event) => {
-  //prüfe x = false, wenn x = false, dann führe funktion aus
 if (enduranceYours > enduranceOpponent){
   swal("You won!").then(function() {
     window.location.reload()});
@@ -78,8 +77,7 @@ if (enduranceYours > enduranceOpponent){
     "https://pokeapp728.herokuapp.com/api/game/save",
     newEntry)
     }
- //setze x = true
-}
+ }
 else if (enduranceYours < enduranceOpponent) {swal("You lost!").then(function() {
   window.location.reload()})}}
 
