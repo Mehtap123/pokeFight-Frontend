@@ -7,6 +7,7 @@ import PokemonInfo from "./components/PokemonInfo";
 import PokemonInfoDetail from "./components/PokemonInfoDetail";
 import Fight from "./components/Fight";
 import SearchBar from "./components/SearchBar";
+import Pokemoncopy from "./components/Pokemoncopy";
 
 const App = () => {
   const [data, setData] = useState([]);
@@ -17,10 +18,10 @@ const App = () => {
   // };
 
   useEffect(() => {
-    // fetch("https://pokeapp728.herokuapp.com/api/pokemon/search?query=${searchWord}")
-    fetch(
-      "https://raw.githubusercontent.com/fanzeyi/pokemon.json/master/pokedex.json"
-    )
+    fetch("https://pokeapp728.herokuapp.com/api/pokemon")
+      // fetch(
+      //   "https://raw.githubusercontent.com/fanzeyi/pokemon.json/master/pokedex.json"
+      // )
       .then((res) => res.json())
       .then((data) => setData(data))
       .catch((error) => console.log(error));
