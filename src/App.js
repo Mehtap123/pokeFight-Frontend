@@ -6,7 +6,6 @@ import { Routes, Route } from "react-router-dom";
 import PokemonInfo from "./components/PokemonInfo";
 import PokemonInfoDetail from "./components/PokemonInfoDetail";
 import Fight from "./components/Fight";
-import SearchBar from "./components/SearchBar";
 import Leaderboard from "./components/Leaderboard";
 
 const App = () => {
@@ -34,7 +33,7 @@ const App = () => {
           id="inputtext"
           type="text"
           placeholder="search for pokemon"
-          value={searchWord}
+          value={searchWord}y
           onChange={handleChange}
         />
       </div> */}
