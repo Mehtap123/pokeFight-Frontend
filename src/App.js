@@ -7,6 +7,7 @@ import PokemonInfo from "./components/PokemonInfo";
 import PokemonInfoDetail from "./components/PokemonInfoDetail";
 import Fight from "./components/Fight";
 import SearchBar from "./components/SearchBar";
+import Leaderboard from "./components/Leaderboard";
 
 const App = () => {
   const [data, setData] = useState([]);
@@ -48,6 +49,7 @@ const App = () => {
             element={<PokemonInfoDetail data={data} />}
           />
           <Route path="pokemons/:id/fight" element={<Fight data={data} />} />
+          <Route path="pokemons/leaderboard" element={<Leaderboard/>}/>
         </Routes>
       ) : (
         "Loading...."
