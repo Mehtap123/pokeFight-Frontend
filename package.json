@@ -12,7 +12,6 @@
     "react-audio-player": "^0.17.0",
     "react-bootstrap": "^2.4.0",
     "react-dom": "^18.1.0",
-    "react-img-mapper": "^1.4.0",
     "react-router-dom": "^6.3.0",
     "react-scripts": "5.0.1",
     "sweetalert": "^2.1.2",
