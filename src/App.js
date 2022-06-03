@@ -18,10 +18,10 @@ const App = () => {
   // };
 
   useEffect(() => {
-    // fetch("https://pokeapp728.herokuapp.com/api/pokemon/search?query=${searchWord}")
-    fetch(
-      "https://raw.githubusercontent.com/fanzeyi/pokemon.json/master/pokedex.json"
-    )
+    fetch("https://pokeapp728.herokuapp.com/api/pokemon")
+      // fetch(
+      //   "https://raw.githubusercontent.com/fanzeyi/pokemon.json/master/pokedex.json"
+      // )
       .then((res) => res.json())
       .then((data) => setData(data))
       .catch((error) => console.log(error));
@@ -49,7 +49,7 @@ const App = () => {
             element={<PokemonInfoDetail data={data} />}
           />
           <Route path="pokemons/:id/fight" element={<Fight data={data} />} />
-          <Route path="pokemons/leaderboard" element={<Leaderboard/>}/>
+          <Route path="pokemons/leaderboard" element={<Leaderboard />} />
         </Routes>
       ) : (
         "Loading...."

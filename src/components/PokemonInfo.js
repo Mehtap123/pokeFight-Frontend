@@ -23,15 +23,16 @@ const PokemonInfo = ({ data, pictures }) => {
         <div className="pokemonschrift">
           <img src={pokemon} alt="Bild" height={225} />
         </div>
-        {findPokemon && (
-          <div className="card stylecard ">
-            <div className="stylebody">
-              <h1 className="card-title poke-title">
-                {findPokemon.name.english}
-              </h1>
-              {/* <div>
+      </div>
+      {findPokemon && (
+        <div className="card stylecard ">
+          <div className="stylebody">
+            <h1 className="card-title poke-title">
+              {findPokemon.name.english}
+            </h1>
+            {/* <div>
                 <div className="logo-wrap"> */}
-              {/* <div className="pokelogo">
+            {/* <div className="pokelogo">
                   <img
                     src={logo}
                     alt="Bild"
@@ -41,8 +42,8 @@ const PokemonInfo = ({ data, pictures }) => {
                     classNameName="App-logo"
                   />
                 </div> */}
-              {/* <h2 className="japanese">{findPokemon.name.japanese}</h2> */}
-              {/* <div className="pokelogo2">
+            {/* <h2 className="japanese">{findPokemon.name.japanese}</h2> */}
+            {/* <div className="pokelogo2">
                   <img
                     src={logo2}
                     alt="Bild"
@@ -52,44 +53,43 @@ const PokemonInfo = ({ data, pictures }) => {
                     className="App-logo2"
                   />
                 </div> */}
-              {/* </div>
+            {/* </div>
               </div> */}
 
-              {/* <h6 className="card-title">
+            {/* <h6 className="card-title">
               HP:{findPokemon.base.HP} Attack: {findPokemon.base.Attack}
             </h6> */}
-              <img
-                src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${id}.png`}
-                className="rounded mx-auto d-block img-detail"
-                alt="..."
-              ></img>
-              <div className="stylebody">
-                <h4 className="card-title">
-                  1st Type: {findPokemon.type[0]} | 2nd Type:{" "}
-                  {findPokemon.type[1]}
-                </h4>
-                <div className="buttonstyletwo">
-                  <Link to="/pokemons" className="btn btn-warning buttonstyle">
-                    Back
-                  </Link>
-                  <Link
-                    to={`/pokemons/${findPokemon.id}/fight`}
-                    className="btn btn-warning buttonstyle"
-                  >
-                    Click here to fight
-                  </Link>
-                  <Link
-                    to={`/pokemons/${findPokemon.id}/info`}
-                    className="btn btn-warning"
-                  >
-                    Details
-                  </Link>
-                </div>
+            <img
+              src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${id}.png`}
+              className="rounded mx-auto d-block img-detail"
+              alt="..."
+            ></img>
+            <div className="stylebody">
+              <h4 className="card-title">
+                1st Type: {findPokemon.type[0]} | 2nd Type:{" "}
+                {findPokemon.type[1]}
+              </h4>
+              <div className="buttonstyletwo">
+                <Link to="/pokemons" className="btn btn-warning buttonstyle">
+                  Back
+                </Link>
+                <Link
+                  to={`/pokemons/${findPokemon.id}/fight`}
+                  className="btn btn-warning buttonstyle"
+                >
+                  Click here to fight
+                </Link>
+                <Link
+                  to={`/pokemons/${findPokemon.id}/info`}
+                  className="btn btn-warning"
+                >
+                  Details
+                </Link>
               </div>
             </div>
           </div>
-        )}
-      </div>
+        </div>
+      )}
     </>
   );
 };
