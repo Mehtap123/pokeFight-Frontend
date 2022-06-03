@@ -13,7 +13,7 @@ const PokemonInfo = ({ data, pictures }) => {
   console.log(data);
   console.log(pictures);
 
-  const findPokemon = data.find((poke) => id == poke.id);
+  const findPokemon = data.find((poke) => parseInt(id) === poke.id);
   console.log(findPokemon);
 
   return (

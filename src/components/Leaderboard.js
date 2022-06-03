@@ -4,7 +4,7 @@ const Leaderboard = () => {
   const [highscore, setHighscore] = useState([]);
 
   useEffect(() => {
-    const res = fetch("https://pokeapp728.herokuapp.com/api/game/leaderboard")
+    fetch("https://pokeapp728.herokuapp.com/api/game/leaderboard")
       .then((data) => data.json())
       .then((data) => setHighscore(data))
       .catch((error) => console.log(error));
@@ -33,16 +33,16 @@ const Leaderboard = () => {
             <th scope="col">Highscore</th>
           </tr>
         </thead>
-        {showHighscore &&
-          showHighscore.map((score, index) => (
-            <tbody>
-              <tr>
-                <th scope="row" key={index}>{index +1}</th>
+        <tbody>
+          {showHighscore &&
+            showHighscore.map((score, index) => (
+              <tr key={index}>
+                <th scope="row">{index + 1}</th>
                 <td>{score.name}</td>
                 <td>{score.highscore}</td>
               </tr>
-            </tbody>
-          ))}
+            ))}
+        </tbody>
       </table>
     </>
   );

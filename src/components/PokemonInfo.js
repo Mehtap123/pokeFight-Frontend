@@ -1,7 +1,6 @@
 import { useParams, Link } from "react-router-dom";
 import pokemon from "../img/Pokemon-Logo-Schrift.png";
 import "../index.css";
-import Bild from "../img/592678.jpg";
 
 import React from "react";
 
@@ -14,7 +13,7 @@ const PokemonInfo = ({ data, pictures }) => {
   console.log(data);
   console.log(pictures);
 
-  const findPokemon = data.find((poke) => id == poke.id);
+  const findPokemon = data.find((poke) => parseInt(id) === poke.id);
   console.log(findPokemon);
 
   return (

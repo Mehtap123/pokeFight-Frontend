@@ -1,15 +1,15 @@
 import { Link } from "react-router-dom";
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import pokemon from "../img/Pokemon-Logo-Schrift.png";
 
 const Pokemon = ({ data }) => {
-  const jsondata = data;
+  // const jsondata = data;
 
   //console.log(jsondata[id]);
 
-  const id = jsondata.id;
+  // const id = jsondata.id;
 
-  const [pokePics, setPokePics] = useState([]);
+  // const [pokePics, setPokePics] = useState([]);
 
   const url = `https://pokeapi.co/api/v2/pokemon/pikachu`;
   useEffect(() => {
@@ -17,7 +17,7 @@ const Pokemon = ({ data }) => {
       .then((res) => res.json())
       .then((data) => console.log(data))
       .catch((error) => console.log(error));
-  }, []);
+  }, [url]);
 
   return (
     <>
@@ -64,6 +64,9 @@ const Pokemon = ({ data }) => {
               </Link>
               <Link to={`${item.id}`} className="btn buttonstyle ">
                 Info
+              </Link>
+              <Link to="/pokemons/leaderboard" className="btn buttonstyle ">
+                Rank
               </Link>
             </div>
           </div>
