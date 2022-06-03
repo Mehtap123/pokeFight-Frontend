@@ -13,6 +13,13 @@ body {
   height: 800px; */
   background-color: #ffcc00;
 }
+
+@font-face {
+  font-family: "Pokemon Solid", sans-serif;
+  src: local("Pokemon Solid"),
+    url(./fonts/Pokemon\ Solid.ttf) format("truetype");
+}
+
 .pokemon {
   /* margin-top: 5px; */
   background-image: url(./img/Pokemon-Logo-Schrift.png);
@@ -269,3 +276,22 @@ code {
 .card-fight {
   min-width: 400px;
 }
+
+/* leaderboard */
+
+.leaderboard-btn {
+  display: flex;
+  justify-content: center;
+}
+
+.table {
+  justify-content: center;
+  background-color: antiquewhite;
+  /* width: 60%; */
+}
+
+/* .highscore {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+} */

@@ -92,7 +92,10 @@ const Fight = ({ data }) => {
     <>
       <div className="pokemonschrift-wrap">
         <div className="pokemonschrift">
-          <img src={pokemon} alt="Bild" height={225} />
+          <Link to="/">
+            <img src={pokemon} alt="Bild" className="pokemonschrift" />
+          </Link>
+          {/* <img src={pokemon} alt="Bild" height={225} /> */}
         </div>
       </div>
 
