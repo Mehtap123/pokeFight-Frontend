@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 
 const SearchBar = () => {
   const [searchWord, setSearchWord] = useState();
@@ -22,17 +23,16 @@ const SearchBar = () => {
       .catch((error) => console.log(error));
   }, [searchWord]);
 
+
+
   return (
     <>
-      <div className="form-control" id="searchbar">
-        <input
-          id="inputtext"
-          type="text"
-          placeholder="search for pokemon"
-          value={searchWord}
-          onChange={handleChange}
-        />
+      <div className="form-control">
+        
+        <Link to="/pokemons/leaderboard" ><button>see highscore</button></Link>
       </div>
+
+      
     </>
   );
 };
