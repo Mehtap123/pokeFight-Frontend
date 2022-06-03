@@ -3,7 +3,7 @@ import pokemon from "../img/Pokemon-Logo-Schrift.png";
 import swal from 'sweetalert';
 import axios from "axios";
 import { useEffect, useState } from "react";
-
+import logo from "../logo.svg";
 
 import React from "react";
 
