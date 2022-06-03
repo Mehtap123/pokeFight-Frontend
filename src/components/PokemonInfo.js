@@ -74,7 +74,7 @@ const PokemonInfo = ({ data, pictures }) => {
                   </Link>
                   <Link
                     to={`/pokemons/${findPokemon.id}/fight`}
-                    className="btn btn-warning"
+                    className="btn btn-warning buttonstyle"
                   >
                     Click here to fight
                   </Link>
